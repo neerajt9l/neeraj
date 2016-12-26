@@ -19,13 +19,695 @@ text-align:center;
     -webkit-transform: translateY(50%);
     -o-transform: translateY(50%);
 	}
+	
+	
+.jobstatus0{background-color:#FFFFFF !important;}
+.jobstatus1{background-color:#0000FF !important;color:#FFFFFF;}
+.jobstatus2{background-color:#FFFF00 !important;}
+.jobstatus3{background-color:#03A7E9 !important;}
+.jobstatus4{background-color:#556B2F !important;color:#FFFFFF;}
+.jobstatus5{background-color:#ffa500 !important;}
+.jobstatus6{background-color:#FF1A00 !important;}
+.mouse_hover { cursor: pointer; cursor: hand; }
+
+.portfolio-img{ cursor: pointer; cursor: hand; }
+.show-popup{
+	z-index: 999;
+	display: none;
+}
+.show-popup .overlay{
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,.66);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.show-popup .img-show{
+	width: 100%;
+	height: 400px;
+	background: #FFF;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden
+}
+#ppd-img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.close-btn { 
+    border: 2px solid #c2c2c2;
+    position: relative;
+    padding: 1px 5px;
+    background-color: #605F61;
+    left: 94%; 
+    border-radius: 20px;
+    z-index: 99;
+	cursor: pointer;
+}
+
+.close-btn a {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
 </style>
 <body>
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-6">
-Left side
-</div>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#current">Current Jobs</a></li>
+                    <li><a data-toggle="tab" href="#history">Jobs History</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="current" class="tab-pane fade in active">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Job Id</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <!--v-for-start--><tbody>
+                                <tr class="jobstatus2" id="p274">
+                                    <td class="mouse_hover">20 Dec,2016</td>
+                                    <td class="mouse_hover">11:00</td>
+                                    <td class="mouse_hover">274</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p271">
+                                    <td class="mouse_hover">17 Dec,2016</td>
+                                    <td class="mouse_hover">15:30</td>
+                                    <td class="mouse_hover">271</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><tr style="display:none;" class="jobstatus4" id="e272">
+                                    <td class="mouse_hover">17 Dec,2016</td>
+                                    <td class="mouse_hover">11:00</td>
+                                    <td class="mouse_hover">272</td>
+                                    <td></td>
+                                </tr><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p232">
+                                    <td class="mouse_hover">18 Nov,2016</td>
+                                    <td class="mouse_hover">20:15</td>
+                                    <td class="mouse_hover">232</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p171">
+                                    <td class="mouse_hover">07 Nov,2016</td>
+                                    <td class="mouse_hover">10:45</td>
+                                    <td class="mouse_hover">171</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus0" id="p152">
+                                    <td class="mouse_hover">07 Nov,2016</td>
+                                    <td class="mouse_hover">16:15</td>
+                                    <td class="mouse_hover">152</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus3" id="p75">
+                                    <td class="mouse_hover">02 Oct,2016</td>
+                                    <td class="mouse_hover">09:00</td>
+                                    <td class="mouse_hover">75</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p74">
+                                    <td class="mouse_hover">01 Oct,2016</td>
+                                    <td class="mouse_hover">13:00</td>
+                                    <td class="mouse_hover">74</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus1" id="p73">
+                                    <td class="mouse_hover">01 Oct,2016</td>
+                                    <td class="mouse_hover">17:45</td>
+                                    <td class="mouse_hover">73</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus3" id="p70">
+                                    <td class="mouse_hover">01 Oct,2016</td>
+                                    <td class="mouse_hover">16:30</td>
+                                    <td class="mouse_hover">70</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><tr style="display:none;" class="jobstatus4" id="e80">
+                                    <td class="mouse_hover">10 Oct,2016</td>
+                                    <td class="mouse_hover">09:00</td>
+                                    <td class="mouse_hover">80</td>
+                                    <td></td>
+                                </tr><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p67">
+                                    <td class="mouse_hover">01 Oct,2016</td>
+                                    <td class="mouse_hover">18:15</td>
+                                    <td class="mouse_hover">67</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p66">
+                                    <td class="mouse_hover">01 Oct,2016</td>
+                                    <td class="mouse_hover">16:00</td>
+                                    <td class="mouse_hover">66</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p65">
+                                    <td class="mouse_hover">01 Oct,2016</td>
+                                    <td class="mouse_hover">12:15</td>
+                                    <td class="mouse_hover">65</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus3" id="p64">
+                                    <td class="mouse_hover">13 Oct,2016</td>
+                                    <td class="mouse_hover">15:15</td>
+                                    <td class="mouse_hover">64</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus0" id="p62">
+                                    <td class="mouse_hover">07 Oct,2016</td>
+                                    <td class="mouse_hover">16:45</td>
+                                    <td class="mouse_hover">62</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus3" id="p56">
+                                    <td class="mouse_hover">03 Oct,2016</td>
+                                    <td class="mouse_hover">10:00</td>
+                                    <td class="mouse_hover">56</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus3" id="p55">
+                                    <td class="mouse_hover">03 Oct,2016</td>
+                                    <td class="mouse_hover">09:00</td>
+                                    <td class="mouse_hover">55</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p54">
+                                    <td class="mouse_hover">30 Sep,2016</td>
+                                    <td class="mouse_hover">12:30</td>
+                                    <td class="mouse_hover">54</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus0" id="p49">
+                                    <td class="mouse_hover">03 Oct,2016</td>
+                                    <td class="mouse_hover">11:15</td>
+                                    <td class="mouse_hover">49</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus3" id="p32">
+                                    <td class="mouse_hover">30 Sep,2016</td>
+                                    <td class="mouse_hover">12:30</td>
+                                    <td class="mouse_hover">32</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><tr style="display:none;" class="jobstatus0" id="e61">
+                                    <td class="mouse_hover">05 Oct,2016</td>
+                                    <td class="mouse_hover">17:45</td>
+                                    <td class="mouse_hover">61</td>
+                                    <td></td>
+                                </tr><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p17">
+                                    <td class="mouse_hover">27 Sep,2016</td>
+                                    <td class="mouse_hover">15:00</td>
+                                    <td class="mouse_hover">17</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p16">
+                                    <td class="mouse_hover">27 Sep,2016</td>
+                                    <td class="mouse_hover">12:45</td>
+                                    <td class="mouse_hover">16</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p15">
+                                    <td class="mouse_hover">27 Sep,2016</td>
+                                    <td class="mouse_hover">10:30</td>
+                                    <td class="mouse_hover">15</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p14">
+                                    <td class="mouse_hover">26 Sep,2016</td>
+                                    <td class="mouse_hover">19:30</td>
+                                    <td class="mouse_hover">14</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus3" id="p13">
+                                    <td class="mouse_hover">26 Sep,2016</td>
+                                    <td class="mouse_hover">18:15</td>
+                                    <td class="mouse_hover">13</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus0" id="p12">
+                                    <td class="mouse_hover">26 Sep,2016</td>
+                                    <td class="mouse_hover">17:00</td>
+                                    <td class="mouse_hover">12</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus0" id="p11">
+                                    <td class="mouse_hover">26 Sep,2016</td>
+                                    <td class="mouse_hover">16:00</td>
+                                    <td class="mouse_hover">11</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus0" id="p10">
+                                    <td class="mouse_hover">26 Sep,2016</td>
+                                    <td class="mouse_hover">17:30</td>
+                                    <td class="mouse_hover">10</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p9">
+                                    <td class="mouse_hover">26 Sep,2016</td>
+                                    <td class="mouse_hover">15:15</td>
+                                    <td class="mouse_hover">9</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p5">
+                                    <td class="mouse_hover">22 Sep,2016</td>
+                                    <td class="mouse_hover">15:30</td>
+                                    <td class="mouse_hover">5</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus3" id="p4">
+                                    <td class="mouse_hover">22 Sep,2016</td>
+                                    <td class="mouse_hover">16:00</td>
+                                    <td class="mouse_hover">4</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><!--v-for-end--> 
+                            </tbody><tbody>
+                                <tr class="jobstatus2" id="p3">
+                                    <td class="mouse_hover">22 Sep,2016</td>
+                                    <td class="mouse_hover">15:00</td>
+                                    <td class="mouse_hover">3</td>
+                                    <td class="job-expand"><i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></td>
+                                    <td class="job-collapsed" style="display:none;"><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+                                    </td>
+                                </tr> 
+                                <!--v-for-start--><tr style="display:none;" class="jobstatus0" id="e100">
+                                    <td class="mouse_hover">24 Oct,2016</td>
+                                    <td class="mouse_hover">12:00</td>
+                                    <td class="mouse_hover">100</td>
+                                    <td></td>
+                                </tr><!--v-for-end--> 
+                            </tbody><!--v-for-end-->
+                        </table>
+                    </div>
+                    <div id="history" class="tab-pane fade">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Job Id</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--v-for-start--><tr class="jobstatus4 mouse_hover" id="h1">
+                                    <td>28 Sep,2016</td>
+                                    <td>15:15</td>
+                                    <td>1</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h2">
+                                    <td>22 Sep,2016</td>
+                                    <td>14:30</td>
+                                    <td>2</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h7">
+                                    <td>26 Sep,2016</td>
+                                    <td>16:00</td>
+                                    <td>7</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h8">
+                                    <td>26 Sep,2016</td>
+                                    <td>15:15</td>
+                                    <td>8</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h18">
+                                    <td>27 Sep,2016</td>
+                                    <td>13:30</td>
+                                    <td>18</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h19">
+                                    <td>28 Sep,2016</td>
+                                    <td>09:00</td>
+                                    <td>19</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h20">
+                                    <td>28 Sep,2016</td>
+                                    <td>12:00</td>
+                                    <td>20</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h21">
+                                    <td>28 Sep,2016</td>
+                                    <td>14:15</td>
+                                    <td>21</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h22">
+                                    <td>29 Sep,2016</td>
+                                    <td>14:30</td>
+                                    <td>22</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h23">
+                                    <td>28 Sep,2016</td>
+                                    <td>12:45</td>
+                                    <td>23</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h24">
+                                    <td>28 Sep,2016</td>
+                                    <td>16:00</td>
+                                    <td>24</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h25">
+                                    <td>30 Sep,2016</td>
+                                    <td>19:45</td>
+                                    <td>25</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h26">
+                                    <td>30 Sep,2016</td>
+                                    <td>11:45</td>
+                                    <td>26</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h27">
+                                    <td>29 Sep,2016</td>
+                                    <td>11:45</td>
+                                    <td>27</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h28">
+                                    <td>29 Sep,2016</td>
+                                    <td>10:30</td>
+                                    <td>28</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h29">
+                                    <td>30 Sep,2016</td>
+                                    <td>11:00</td>
+                                    <td>29</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h30">
+                                    <td>30 Sep,2016</td>
+                                    <td>17:30</td>
+                                    <td>30</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h31">
+                                    <td>29 Sep,2016</td>
+                                    <td>16:00</td>
+                                    <td>31</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h33">
+                                    <td>30 Sep,2016</td>
+                                    <td>10:30</td>
+                                    <td>33</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h34">
+                                    <td>30 Sep,2016</td>
+                                    <td>16:45</td>
+                                    <td>34</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h35">
+                                    <td>01 Oct,2016</td>
+                                    <td>11:00</td>
+                                    <td>35</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h36">
+                                    <td>29 Sep,2016</td>
+                                    <td>13:15</td>
+                                    <td>36</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h37">
+                                    <td>30 Sep,2016</td>
+                                    <td>09:15</td>
+                                    <td>37</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h38">
+                                    <td>29 Sep,2016</td>
+                                    <td>17:30</td>
+                                    <td>38</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h39">
+                                    <td>29 Sep,2016</td>
+                                    <td>18:30</td>
+                                    <td>39</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h40">
+                                    <td>30 Sep,2016</td>
+                                    <td>15:45</td>
+                                    <td>40</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h41">
+                                    <td>02 Oct,2016</td>
+                                    <td>13:45</td>
+                                    <td>41</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h42">
+                                    <td>29 Sep,2016</td>
+                                    <td>09:45</td>
+                                    <td>42</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h43">
+                                    <td>03 Oct,2016</td>
+                                    <td>09:00</td>
+                                    <td>43</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h44">
+                                    <td>04 Oct,2016</td>
+                                    <td>10:00</td>
+                                    <td>44</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h45">
+                                    <td>05 Oct,2016</td>
+                                    <td>10:00</td>
+                                    <td>45</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h46">
+                                    <td>06 Oct,2016</td>
+                                    <td>09:00</td>
+                                    <td>46</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h47">
+                                    <td>03 Oct,2016</td>
+                                    <td>11:00</td>
+                                    <td>47</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h48">
+                                    <td>06 Oct,2016</td>
+                                    <td>12:00</td>
+                                    <td>48</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h50">
+                                    <td>04 Oct,2016</td>
+                                    <td>11:00</td>
+                                    <td>50</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h51">
+                                    <td>19 Oct,2016</td>
+                                    <td>10:30</td>
+                                    <td>51</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h52">
+                                    <td>17 Oct,2016</td>
+                                    <td>11:00</td>
+                                    <td>52</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h53">
+                                    <td>01 Oct,2016</td>
+                                    <td>09:00</td>
+                                    <td>53</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h57">
+                                    <td>04 Oct,2016</td>
+                                    <td>17:15</td>
+                                    <td>57</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h58">
+                                    <td>01 Nov,2016</td>
+                                    <td>09:00</td>
+                                    <td>58</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h60">
+                                    <td>10 Oct,2016</td>
+                                    <td>10:00</td>
+                                    <td>60</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h68">
+                                    <td>01 Oct,2016</td>
+                                    <td>16:15</td>
+                                    <td>68</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h71">
+                                    <td>01 Oct,2016</td>
+                                    <td>17:15</td>
+                                    <td>71</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h72">
+                                    <td>02 Oct,2016</td>
+                                    <td>21:00</td>
+                                    <td>72</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h77">
+                                    <td>05 Oct,2016</td>
+                                    <td>17:00</td>
+                                    <td>77</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h79">
+                                    <td>10 Oct,2016</td>
+                                    <td>06:00</td>
+                                    <td>79</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h80">
+                                    <td>10 Oct,2016</td>
+                                    <td>09:00</td>
+                                    <td>80</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h101">
+                                    <td>21 Oct,2016</td>
+                                    <td>15:15</td>
+                                    <td>101</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h103">
+                                    <td>22 Oct,2016</td>
+                                    <td>10:30</td>
+                                    <td>103</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h104">
+                                    <td>22 Oct,2016</td>
+                                    <td>11:45</td>
+                                    <td>104</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h105">
+                                    <td>22 Oct,2016</td>
+                                    <td>16:45</td>
+                                    <td>105</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h107">
+                                    <td>26 Oct,2016</td>
+                                    <td>17:30</td>
+                                    <td>107</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h108">
+                                    <td>28 Oct,2016</td>
+                                    <td>18:30</td>
+                                    <td>108</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h109">
+                                    <td>28 Oct,2016</td>
+                                    <td>16:30</td>
+                                    <td>109</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h111">
+                                    <td>28 Oct,2016</td>
+                                    <td>17:30</td>
+                                    <td>111</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h138">
+                                    <td>31 Oct,2016</td>
+                                    <td>16:00</td>
+                                    <td>138</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h168">
+                                    <td>03 Nov,2016</td>
+                                    <td>17:00</td>
+                                    <td>168</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h243">
+                                    <td>02 Dec,2016</td>
+                                    <td>15:01</td>
+                                    <td>243</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h260">
+                                    <td>15 Dec,2016</td>
+                                    <td>18:00</td>
+                                    <td>260</td>
+                                </tr><tr class="jobstatus5 mouse_hover" id="h265">
+                                    <td>16 Dec,2016</td>
+                                    <td>15:45</td>
+                                    <td>265</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h266">
+                                    <td>16 Dec,2016</td>
+                                    <td>15:00</td>
+                                    <td>266</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h267">
+                                    <td>17 Dec,2016</td>
+                                    <td>10:00</td>
+                                    <td>267</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h272">
+                                    <td>17 Dec,2016</td>
+                                    <td>11:00</td>
+                                    <td>272</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h273">
+                                    <td>19 Dec,2016</td>
+                                    <td>10:00</td>
+                                    <td>273</td>
+                                </tr><tr class="jobstatus4 mouse_hover" id="h275">
+                                    <td>22 Dec,2016</td>
+                                    <td>10:00</td>
+                                    <td>275</td>
+                                </tr><!--v-for-end--> 
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 <div class="col-md-6">
 <h3 class="header">Select To Approve</h3>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -35,7 +717,7 @@ Left side
 <input type="checkbox" />
 </div>
 <div class="col-lg-6  col-md-6 col-sm-6 col-xs-6 ">
-<img class="img-responsive" src="C:/Users/753554/Downloads/checkonly.png"></div>
+<img class="img-responsive portfolio-img" src="/images.png"></div>
 </div>
 <p>chijka dbsjdbsjdbk </p>
 <!-- Repeattion STart -->
@@ -44,7 +726,7 @@ Left side
 <input type="checkbox" />
 </div>
 <div class="col-lg-6  col-md-6 col-sm-6 col-xs-6 ">
-<img class="img-responsive" src="C:/Users/753554/Downloads/checkonly.png"></div>
+<img class="img-responsive portfolio-img" src="/images.png"></div>
 </div>
 <p>chijka dbsjdbsjdbk </p>
 <!-- Repeattion End -->
@@ -58,7 +740,7 @@ Left side
 <input type="checkbox" />
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
-<img class="img-responsive" src="C:/Users/753554/Downloads/checkonly.png"></div>
+<img class="img-responsive portfolio-img" src="/images.png"></div>
 </div>
 <p>vfgsdhbfjksdbfjsdbfjksdbfjksdbfjkbsdf</p>
 
@@ -69,11 +751,17 @@ Left side
 <input type="checkbox" />
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
-<img class="img-responsive" src="C:/Users/753554/Downloads/checkonly.png"></div>
+<img class="img-responsive portfolio-img" src="/images.png"></div>
 </div>
 <p>vfgsdhbfjksdbfjsdbfjksdbfjksdbfjkbsdf</p>
 
-
+<div class="show-popup" style="display: none;">
+                                <div class="overlay"></div>
+                                <div class="img-show">
+                                    <span class="close-btn"><a href="javascript:void(0);">X</a></span>
+                                    <img id="ppd-img" src="">
+                                </div> 
+                            </div>
 
 
 
@@ -82,5 +770,20 @@ Left side
 </div>
 </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		$('body').on('click', '.portfolio-img', function () {
+                var src = $(this).attr('src');
+                $('.show-popup').fadeIn();
+                $('#ppd-img').attr('src', src);
+
+            });
+
+            $('span, .overlay').click(function(){
+                    $('.show-popup').fadeOut();
+            });
+	});
+	</script>
 </body>
 </html>
